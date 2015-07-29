@@ -1,0 +1,12 @@
+G:\Develop\C# Visual Studio\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+G:\Develop\C# Visual Studio\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+G:\Develop\C# Visual Studio\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+G:\Develop\C# Visual Studio\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+G:\Develop\C# Visual Studio\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+G:\Develop\C# Visual Studio\ConsoleApplication1\ConsoleApplication1\obj\Debug\Frequenzverteilung Project.csprojResolveAssemblyReference.cache
+G:\ProjectsGit\Frequenzverteilung.G18.IT4b_2015_C-\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+G:\ProjectsGit\Frequenzverteilung.G18.IT4b_2015_C-\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+G:\ProjectsGit\Frequenzverteilung.G18.IT4b_2015_C-\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+G:\ProjectsGit\Frequenzverteilung.G18.IT4b_2015_C-\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+G:\ProjectsGit\Frequenzverteilung.G18.IT4b_2015_C-\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+G:\ProjectsGit\Frequenzverteilung.G18.IT4b_2015_C-\ConsoleApplication1\ConsoleApplication1\obj\Debug\Frequenzverteilung Project.csprojResolveAssemblyReference.cache
