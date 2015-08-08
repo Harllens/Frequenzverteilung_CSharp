@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Globalization;
-// Maxter
+// by Maxter
 
 namespace Frequenzverteilung
 {
@@ -26,7 +26,7 @@ namespace Frequenzverteilung
         }
 
         /// <summary>
-        /// Read the Data from text File and fill the "SenderCollection List" with the specifies values.
+        /// Read the Data from Text File.
         /// </summary>
         private static void Start()
         {
@@ -59,9 +59,6 @@ namespace Frequenzverteilung
             Output();
         }
 
-        /// <summary>
-        /// Final Result of the Programm
-        /// </summary>
         private static void Output()
         {
             Console.WriteLine("Senderpositionen (X,Y) und Senderadien:" + Environment.NewLine);
@@ -116,7 +113,7 @@ namespace Frequenzverteilung
         /// </summary>
         private static void FindFrequencies()
         {
-            // Uses a temporal "tempSender Instance" to compare which sender have more Disabled(Barrier) Frequencies 
+            // Temporal "tempSender Instance" for Frequencies comparation.
             Sender tempSender = new Sender();
 
             foreach (Sender sender in SenderCollection.senderCollection)
@@ -124,28 +121,23 @@ namespace Frequenzverteilung
                 if (sender.frequency == 0)
                 {
                     if (sender.disabled.Count > tempSender.disabled.Count)
-                    {
                         tempSender = sender;
-                    }
+                    
                     // Phase 1 --> Choose the Sender with the most Overlaps ( 1. die meisten Überschneidungen)
                     else if (sender.overlaps.Count > tempSender.overlaps.Count)
-                    {
                         tempSender = sender;
-                    }
+
                     else if (sender.overlaps.Count == tempSender.overlaps.Count)
                     {
                         // Phase 2 --> Choose the Sender where X have the lowest coordinate ( 2. den westlichsten (kleinste x-Koordinate))
                         if (sender.x < tempSender.x)
-                        {
                             tempSender = sender;
-                        }
+
                         else if (sender.x == tempSender.x)
                         {
                             // Phase 3 --> Choose the Sender where Y have the lowest coordinate ( 3. den südlichsten (kleinste y-Koordinate))
                             if (sender.y < tempSender.y)
-                            {
                                 tempSender = sender;
-                            }
                         }
                     }
                 }
@@ -153,7 +145,7 @@ namespace Frequenzverteilung
 
             for (int i = SenderIDCount; i > 0; i--)
             {
-                // Asing the most low Frequencie to the Sender
+                // Get and Asing the most low Frequencie to the Sender
                 if (!tempSender.disabled.Contains(i))
                     tempSender.frequency = i;
             }
@@ -174,16 +166,12 @@ namespace Frequenzverteilung
                 sender.overlaps = new List<int>();
                 foreach (Sender sender2 in SenderCollection.senderCollection)
                 {
-                    // Compare the "Number(nr) of both instances and evitate that the Sender multipicate it's selft"
+                    // Check that the sender don't multiply with it self
                     if (sender.nr != sender2.nr)
                     {
-                        // Compare the "SenderCollection List" and get the "X Coordinate" and the "Y Coordinates" from the two instances "Sender" and "Sender2" 
-                        // and multiplicate it.
+                        // Multiply the X , Y coordinates, get the Sum of the Radius and save the Sender with most Overlaps.
                         if (sender.r + sender2.r > Math.Sqrt(Convert.ToDouble(((sender2.x - sender.x) * (sender2.x - sender.x)) + ((sender2.y - sender.y) * (sender2.y - sender.y)))))
-                        {
-                            // Save all the Overlap Sender in a List
                             sender.overlaps.Add(sender2.nr);
-                        }
                     }
                 }
             }
